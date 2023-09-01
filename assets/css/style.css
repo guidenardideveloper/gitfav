@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-secondary: 'Roboto Mono', monospace;
+
+    --color-black-100: #000;
+    --color-black-200: #06181C;
+    --color-black-300: rgba(6, 22, 27, .5);
+    --color-white: #fff;
+    --color-white-primary: #e1e1e6;
+    --color-gray-100: #7c7c8a;
+    --color-gray-200: #4E5455;
+    --color-green-100: #065E7C;
+    --color-green-200: #06181C;
+    --color-green-300: #4A808C;
+    --color-green-400: #092D38;
+    --color-green-500: #043444;
+    --color-red-primary: #F75A68;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: black;
+    background-color: var(--color-black-100);
+}
+body * {
+    font-family: var(--ff-primary);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+#app {
+    max-width: 1120px;
+    height: 100vh;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search {
+    display: flex;
+    gap: .8rem;
+}
+.search input {
+    width: 46.2rem;
+    padding: 1.6rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--color-green-200);
+    color: var(--color-gray-100);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+}
+.search input::placeholder {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    color: var(--color-gray-100);
+}
+.search button {
+    padding: 1.2rem 3.2rem;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    color: var(--color-white);
+    background-color: var(--color-green-100);
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+.search button:hover,
+.search button:hover svg path{
+    background-color: var(--color-white);
+    color: var(--color-green-100);
+    fill: var(--color-green-100);
+}
+
+
+.container-table {
+    height: 68.8rem;
+    margin-top: 8.7rem;
+    background-color: #000;
+    overflow: auto;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+    border: 1px solid var(--color-green-300);
+}
+.container-table::-webkit-scrollbar {
+    width: .6rem;
+    border-radius: 1.8rem;
+}
+.container-table::-webkit-scrollbar-thumb {
+    border-radius: 1.8rem;
+    background-color: var(--color-green-300);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table * {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-white);
+}
+table th {
+    padding: 1.6rem 4rem;
+    text-align: left;
+    background-color: var(--color-green-400);
+}
+table th:first-child {
+    border-top-left-radius: 1.2rem;
+}
+table th:last-child {
+    border-top-right-radius: 1.2rem;
+}
+table tr:nth-child(odd) {
+    background-color: var(--color-black-300);
+}
+table tr:nth-child(even) {
+    background-color: var(--color-black-200);
+    border-top: 1px solid var(--color-green-300);
+    border-bottom: 1px solid var(--color-green-300);
+}
+table td {
+    padding: 2.4rem 4rem;
+    text-align: left;
+}
+table .user {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+table .user img {
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+}
+table .user a {
+    text-decoration: none;
+}
+table .user span {
+    font-weight: 400;
+}
+table .action button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    color: var(--color-red-primary);
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+table .action button:hover {
+    color: #a53b43;
+}
+
+.favorite-notfound-bg {
+    width: 100%;
+    height: 63rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+
+    background-color: var(--color-black-300);
+}
+.favorite-notfound-bg img {
+    width: 13.2rem;
+    height: 12.5rem;
+}
+.favorite-notfound-bg h1 {
+    font-family: var(--ff-secondary);
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    color: var(--color-gray-200);
+}
